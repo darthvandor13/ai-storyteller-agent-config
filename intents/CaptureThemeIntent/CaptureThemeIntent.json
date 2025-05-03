@@ -1,0 +1,7 @@
+{
+  "name": "6dff1006-70ea-42de-8c79-7d9e67ba03ce",
+  "displayName": "CaptureThemeIntent",
+  "priority": 500000,
+  "description": "Intent is to get the story's theme from the user and store as a parameter.",
+  "numTrainingPhrases": 7
+}

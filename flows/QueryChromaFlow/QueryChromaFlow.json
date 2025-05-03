@@ -1,0 +1,72 @@
+{
+  "name": "d0e05c7f-ca20-455a-810d-7f999283fed3",
+  "displayName": "QueryChromaFlow",
+  "description": "Calls chroma_search_webhook using collected story parameters and stores the result.",
+  "transitionRoutes": [ {
+    "intent": "Trigger Chroma Search",
+    "condition": "$session.params.protagonist != null AND $session.params.theme != null AND $session.params.moral != null",
+    "triggerFulfillment": {
+      "webhook": "chroma_search_webhook",
+      "tag": "get_story",
+      "setParameterActions": [ {
+        "parameter": "$session.params.chroma_summary",
+        "value": "$webhookResponse.story_snippet"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "ShowStory",
+    "name": "c64680ec-f025-4a38-9eda-3997c2c17106",
+    "description": "route_trigger_chroma_search\n-Checking that all 3 session parameters exist (protagonist, theme, moral)\n-Calling the webhook\n-Saving the response"
+  } ],
+  "eventHandlers": [ {
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I didn't get that. Can you say it again?", "I missed what you said. What was that?", "Sorry, could you say that again?", "Sorry, can you say that again?", "Can you say that again?", "Sorry, I didn't get that. Can you rephrase?", "Sorry, what was that?", "One more time?", "What was that?", "Say that one more time?", "I didn't get that. Can you repeat?", "I missed that, say that again?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "f6eb4f9e-d79c-45a4-8641-0158fc67b469"
+  }, {
+    "event": "sys.no-input-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I didn't get that. Can you say it again?", "I missed what you said. What was that?", "Sorry, could you say that again?", "Sorry, can you say that again?", "Can you say that again?", "Sorry, I didn't get that. Can you rephrase?", "Sorry, what was that?", "One more time?", "What was that?", "Say that one more time?", "I didn't get that. Can you repeat?", "I missed that, say that again?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "47a88337-27af-4c31-85a3-56cd30a5b65e"
+  } ],
+  "nluSettings": {
+    "modelType": "MODEL_TYPE_ADVANCED",
+    "classificationThreshold": 0.30000001,
+    "modelTrainingMode": "MODEL_TRAINING_MODE_AUTOMATIC",
+    "multiIntentSettings": {
+    
+    }
+  },
+  "advancedSettings": {
+    "enabled": true
+  },
+  "nluSettingsList": [ {
+    "modelType": "MODEL_TYPE_ADVANCED",
+    "classificationThreshold": 0.30000001,
+    "modelTrainingMode": "MODEL_TRAINING_MODE_AUTOMATIC",
+    "customConfigKey": "96d75686-1221-4ae0-846a-bd588d481622",
+    "multiIntentSettings": {
+    
+    },
+    "languageCode": "en"
+  } ]
+}

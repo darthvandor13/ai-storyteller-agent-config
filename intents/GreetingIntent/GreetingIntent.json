@@ -1,0 +1,7 @@
+{
+  "name": "064b0ca9-caac-49d4-998a-f147bfa78a0f",
+  "displayName": "GreetingIntent",
+  "priority": 500000,
+  "description": "Start the conversation with a welcome greeting.",
+  "numTrainingPhrases": 6
+}

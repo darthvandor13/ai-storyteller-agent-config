@@ -1,0 +1,11 @@
+{
+  "name": "ed92e3bf-c62d-41e8-b91f-20a93e0aa20c",
+  "displayName": "ChromaDB Wrapper",
+  "genericWebService": {
+    "uri": "https://chromadb-rest-wrapper-725461437054.us-central1.run.app/query",
+    "webhookType": "STANDARD"
+  },
+  "timeout": {
+    "seconds": 10
+  }
+}

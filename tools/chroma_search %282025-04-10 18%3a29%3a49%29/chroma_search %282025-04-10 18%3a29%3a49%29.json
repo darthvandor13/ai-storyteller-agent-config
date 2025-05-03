@@ -1,0 +1,32 @@
+{
+  "name": "e9a4ce5a-7817-40ee-926f-fc55069ac72e",
+  "displayName": "chroma_search (2025-04-10 18:29:49)",
+  "description": "A function that queries ChromaDB with a story prompt and returns a relevant story or match.",
+  "toolType": "CUSTOMIZED_TOOL",
+  "functionSpec": {
+    "inputSchema": {
+      "properties": {
+        "queryResult": {
+          "properties": {
+            "queryText": {
+              "type": "string"
+            }
+          },
+          "required": [ "queryText" ],
+          "type": "object"
+        }
+      },
+      "required": [ "queryResult" ],
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "fulfillmentText": {
+          "type": "string"
+        }
+      },
+      "required": [ "fulfillmentText" ],
+      "type": "object"
+    }
+  }
+}

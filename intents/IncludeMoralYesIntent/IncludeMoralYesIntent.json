@@ -1,0 +1,7 @@
+{
+  "name": "a9828485-805e-49f5-bab3-8c227ba718ba",
+  "displayName": "IncludeMoralYesIntent",
+  "priority": 500000,
+  "description": "affirmative response to including a moral",
+  "numTrainingPhrases": 8
+}

@@ -1,0 +1,44 @@
+{
+  "name": "22c59f70-9592-4cd9-8e1a-63e4e9bd6afa",
+  "displayName": "story files 2 (2025-03-15 07:12:01)",
+  "description": "Examples of stories that should be used as context for creating new, original stories.",
+  "dataStoreSpec": {
+    "dataStoreConnections": [ {
+      "dataStoreType": "UNSTRUCTURED",
+      "dataStore": "projects/725461437054/locations/us/collections/default_collection/dataStores/story-collection_1742044073850",
+      "documentProcessingMode": "DOCUMENTS",
+      "engineType": "CHAT_ENGINE",
+      "connectorConfig": {
+      
+      },
+      "createTime": {
+        "seconds": 1742044077,
+        "nanos": 714469000
+      },
+      "displayName": "story-collection",
+      "dialogflowAddTime": {
+        "seconds": 1742044306,
+        "nanos": 486000000
+      }
+    } ],
+    "models": {
+      "summarizationModel": {
+        "model": "gemini_pro",
+        "promptText": "Final Answer Generation for AI Storytelling\n\nFollow these guidelines to generate an original story based on the provided texts from the data store:\n\nCreate a compelling, coherent, and original story using information from the provided texts as references.\nEnsure the story incorporates key details, events, themes, and characters from the texts, maintaining their original descriptions and wording where necessary.\nThe story must be entirely based on the provided texts and should not introduce elements that are not supported by them.\nIf multiple texts contain conflicting or alternative versions of events, characters, or details, integrate them logically or acknowledge the variations in a seamless narrative.\nThe story should be engaging, well-structured, and adhere to the genre, tone, or themes suggested by the texts.\nDo not fabricate details that are not present in the sources. If the texts do not contain enough information to create a coherent story, respond with NOT_ENOUGH_INFORMATION.\nEnsure consistency in character traits, world-building, and any recurring elements across the story.\nYou will be given a few examples before you begin.\n\nSources:\n$sources\n\n$conversation\nHuman: $original-query\nAI:"
+      },
+      "rewriterModel": {
+      
+      }
+    },
+    "fallbackPrompt": {
+    
+    },
+    "groundingSettings": {
+    
+    },
+    "payloadSettings": {
+    
+    }
+  },
+  "toolType": "CUSTOMIZED_TOOL"
+}

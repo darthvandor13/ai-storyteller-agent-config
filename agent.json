@@ -1,0 +1,46 @@
+{
+  "displayName": "Storytelling Agent",
+  "defaultLanguageCode": "en",
+  "timeZone": "America/Los_Angeles",
+  "enableLogging": true,
+  "projectNumber": 725461437054,
+  "speechToTextSettings": {
+  
+  },
+  "advancedSettings": {
+    "audioExportGcsDestination": {
+    
+    },
+    "speechSettings": {
+      "endpointerSensitivity": 90,
+      "noSpeechTimeout": {
+        "seconds": 5
+      }
+    },
+    "playbackInterruptionSettings": {
+    
+    },
+    "loggingSettings": {
+      "enableInteractionLogging": true
+    },
+    "speechAdaptationSettings": {
+    
+    }
+  },
+  "speakerIdSettings": {
+  
+  },
+  "genAppBuilderSettings": {
+    "engine": "projects/725461437054/locations/us/collections/default_collection/engines/588ed932-a128-4702-8345-036492a3d809-chat-1741453249"
+  },
+  "duplexSettings": {
+  
+  },
+  "answerFeedbackSettings": {
+  
+  },
+  "startPlaybook": "Storyteller Playbook",
+  "webClientSettings": {
+    "boxBorderRadius": "0"
+  }
+}

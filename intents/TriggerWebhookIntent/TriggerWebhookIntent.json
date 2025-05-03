@@ -1,0 +1,7 @@
+{
+  "name": "af7e72fd-ddb2-49f2-a5b7-a4fa655c8f71",
+  "displayName": "TriggerWebhookIntent",
+  "priority": 500000,
+  "description": "This intent is used to trigger the story generation webhook once all required parameters are set.",
+  "numTrainingPhrases": 2
+}

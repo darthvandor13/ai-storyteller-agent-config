@@ -1,0 +1,7 @@
+{
+  "name": "4f9c2aab-701e-49c9-875e-90522f9dca00",
+  "displayName": "CaptureMoralIntent",
+  "priority": 500000,
+  "description": "get moral intent for story creation or retrieval",
+  "numTrainingPhrases": 13
+}

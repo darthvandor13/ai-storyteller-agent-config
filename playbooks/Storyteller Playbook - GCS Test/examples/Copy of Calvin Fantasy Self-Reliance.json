@@ -1,0 +1,85 @@
+{
+  "name": "4b43fede-99a7-4aad-896e-9ba8b8d7f736",
+  "actions": [ {
+    "userUtterance": {
+      "text": "I'm ready for a story."
+    }
+  }, {
+    "agentUtterance": {
+      "text": "Wonderful! Welcome, world traveler, to the realm of imagination. Tell me, what is the name of the hero in our tale?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "Calvin"
+    }
+  }, {
+    "agentUtterance": {
+      "text": "Calvin, a fine name! What theme shall we explore? Space? Fantasy? Or perhaps something else entirely?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "Fantasy"
+    }
+  }, {
+    "agentUtterance": {
+      "text": "Fantasy, a realm of magic and wonder! And what moral will guide our hero’s journey? What message will this story convey?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "Self-reliance"
+    }
+  }, {
+    "agentUtterance": {
+      "text": "Self-reliance, a powerful message indeed! So, we have Calvin, our hero, venturing into a realm of fantasy, driven by the importance of relying on oneself. Does that sound right?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "Yes"
+    }
+  }, {
+    "toolUse": {
+      "tool": "WorkspaceStoryContextTool-OneTime",
+      "action": "WorkspaceStoryContextTool-OneTime",
+      "inputActionParameters": {
+        "requestBody": {
+          "filter": "",
+          "query": "Story about $session.params.theme with a moral of $session.params.moral",
+          "userMetadata": {
+          
+          }
+        }
+      },
+      "outputActionParameters": {
+        "200": {
+          "answer": "",
+          "snippets": [ {
+            "text": "",
+            "title": "",
+            "uri": ""
+          } ]
+        }
+      }
+    }
+  }, {
+    "agentUtterance": {
+      "text": "Okay, traveler! Using the inspiration found in our archives ($tool.WorkspaceStoryContextTool-OneTime.snippets), here is a new short story (300-350 words) about $session.params.protagonist in a $session.params.theme setting. The story must teach the moral '$session.params.moral'. Remember to base the story ONLY on the retrieved context from the archives, adapting creatively but not adding external information or copying verbatim. Make sure it has a beginning, middle, and end.\n\nWould you like me to craft another tale, traveler?"
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "The user wants to hear a story. They choose the protagonist name \"Calvin\", the theme \"fantasy\", and the moral \"self-reliance\".",
+    "actionParameters": {
+    
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "Agent successfully generated and presented a story based on user parameters (e.g., Calvin, fantasy, self-reliance) and snippets retrieved from the GCS data store tool.",
+    "actionParameters": {
+    
+    }
+  },
+  "displayName": "Copy of Calvin Fantasy Self-Reliance",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 606,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "en"
+}

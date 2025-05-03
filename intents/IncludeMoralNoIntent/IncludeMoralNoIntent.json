@@ -1,0 +1,7 @@
+{
+  "name": "5a846366-2cbe-4aa3-ac4a-561c854cb211",
+  "displayName": "IncludeMoralNoIntent",
+  "priority": 500000,
+  "description": "negative response to including a moral",
+  "numTrainingPhrases": 11
+}

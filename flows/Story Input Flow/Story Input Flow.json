@@ -1,0 +1,224 @@
+{
+  "name": "823b93fb-0eac-4500-8470-eb0d40b9a2ca",
+  "displayName": "Story Input Flow",
+  "transitionRoutes": [ {
+    "intent": "GreetingIntent",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "$request.generative.text" ]
+        },
+        "languageCode": "en"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      },
+      "generators": [ {
+        "generator": "projects/ai-storyteller-453116/locations/us-central1/agents/588ed932-a128-4702-8345-036492a3d809/generators/87bddc86-e9f8-493e-a558-441cda5587e8",
+        "outputParameter": "$request.generative.text"
+      } ]
+    },
+    "name": "cbea1126-e0a5-4b8a-b999-a23638fef5d1"
+  }, {
+    "intent": "CaptureProtagonistIntent",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "$request.generative." ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "session.params.protagonist",
+        "value": "$intent.query"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      },
+      "generators": [ {
+        "generator": "projects/ai-storyteller-453116/locations/us-central1/agents/588ed932-a128-4702-8345-036492a3d809/generators/3e53c289-43bf-476d-9694-f2f6fa39200a",
+        "outputParameter": "$request.generative."
+      } ]
+    },
+    "name": "f3531a11-1907-4620-a0bd-5e23c9fa10dc"
+  }, {
+    "intent": "CaptureThemeIntent",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "$request.generative.", "Would you like your story to include a moral or lesson?" ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "$session.params.theme",
+        "value": "$intent.query"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      },
+      "generators": [ {
+        "generator": "projects/ai-storyteller-453116/locations/us-central1/agents/588ed932-a128-4702-8345-036492a3d809/generators/ce988188-008e-447b-98cb-270c43bd5179",
+        "inputParameters": [ {
+          "key": "theme",
+          "value": "session.params.theme"
+        } ],
+        "outputParameter": "$request.generative."
+      } ]
+    },
+    "name": "62f934f8-dbfe-417c-bd0d-785b8e83fec6",
+    "description": "Captures the story theme from user input."
+  }, {
+    "intent": "IncludeMoralYesIntent",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "$request.generative." ]
+        },
+        "languageCode": "en"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      },
+      "generators": [ {
+        "generator": "projects/ai-storyteller-453116/locations/us-central1/agents/588ed932-a128-4702-8345-036492a3d809/generators/9958ce57-d06f-490f-9fe8-bdd594ddbbfc",
+        "outputParameter": "$request.generative."
+      } ]
+    },
+    "name": "b7604788-12e7-420a-9794-6a5646293d0d"
+  }, {
+    "intent": "IncludeMoralNoIntent",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "$request.generative." ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "session.params.moral",
+        "value": "none"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      },
+      "generators": [ {
+        "generator": "projects/ai-storyteller-453116/locations/us-central1/agents/588ed932-a128-4702-8345-036492a3d809/generators/340ddbe3-ff45-4cef-92c8-bede8c77c3fb",
+        "outputParameter": "$request.generative."
+      } ]
+    },
+    "name": "d11f5343-27c6-4d32-9d92-67dfac7e3a88"
+  }, {
+    "intent": "CaptureMoralIntent",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "$request.generative." ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "session.params.moral",
+        "value": "$intent.query"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      },
+      "generators": [ {
+        "generator": "projects/ai-storyteller-453116/locations/us-central1/agents/588ed932-a128-4702-8345-036492a3d809/generators/2f2eacb6-d8a2-414b-b7fd-baf59723fc57",
+        "inputParameters": [ {
+          "key": "moral",
+          "value": "session.params.moral"
+        } ],
+        "outputParameter": "$request.generative."
+      } ]
+    },
+    "name": "ce215000-0390-4d3e-864f-94525ada9f33"
+  }, {
+    "intent": "TriggerWebhookIntent",
+    "condition": "$session.params.protagonist != null AND $session.params.theme != null AND $session.params.moral != null",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Sending to webhook..." ]
+        },
+        "languageCode": "en"
+      } ],
+      "webhook": "chroma_search_webhook",
+      "tag": "get_Story",
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "name": "693acd18-eb4a-4634-8e0a-58984d9cad17",
+    "description": "Test route to manually trigger webhook"
+  } ],
+  "eventHandlers": [ {
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I didn't get that. Can you say it again?", "I missed what you said. What was that?", "Sorry, could you say that again?", "Sorry, can you say that again?", "Can you say that again?", "Sorry, I didn't get that. Can you rephrase?", "Sorry, what was that?", "One more time?", "What was that?", "Say that one more time?", "I didn't get that. Can you repeat?", "I missed that, say that again?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "c54c5f3f-652a-4b8a-a564-ad9c40ef7da7"
+  }, {
+    "event": "sys.no-input-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I didn't get that. Can you say it again?", "I missed what you said. What was that?", "Sorry, could you say that again?", "Sorry, can you say that again?", "Can you say that again?", "Sorry, I didn't get that. Can you rephrase?", "Sorry, what was that?", "One more time?", "What was that?", "Say that one more time?", "I didn't get that. Can you repeat?", "I missed that, say that again?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "6d85583f-fcef-421b-a364-697ef01bf0bc"
+  } ],
+  "nluSettings": {
+    "modelType": "MODEL_TYPE_ADVANCED",
+    "classificationThreshold": 0.30000001
+  },
+  "nluSettingsList": [ {
+    "modelType": "MODEL_TYPE_ADVANCED",
+    "classificationThreshold": 0.30000001,
+    "customConfigKey": "a29ecd6d-8fe4-42b9-a295-63494add83e1",
+    "languageCode": "en"
+  } ]
+}

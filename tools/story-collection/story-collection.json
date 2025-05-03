@@ -1,0 +1,44 @@
+{
+  "name": "e8386623-6d94-4760-817a-e67aeef68b32",
+  "displayName": "story-collection",
+  "description": "This data store contains various works of fiction. It is organized by Author, then title.",
+  "dataStoreSpec": {
+    "dataStoreConnections": [ {
+      "dataStoreType": "UNSTRUCTURED",
+      "dataStore": "projects/725461437054/locations/us/collections/default_collection/dataStores/story-collection_1742044073850",
+      "documentProcessingMode": "DOCUMENTS",
+      "engineType": "CHAT_ENGINE",
+      "connectorConfig": {
+      
+      },
+      "createTime": {
+        "seconds": 1742044077,
+        "nanos": 714469000
+      },
+      "displayName": "story-collection",
+      "dialogflowAddTime": {
+        "seconds": 1742048198,
+        "nanos": 414000000
+      }
+    } ],
+    "models": {
+      "summarizationModel": {
+        "model": "gemini_20_flash_001"
+      },
+      "rewriterModel": {
+      
+      }
+    },
+    "fallbackPrompt": {
+    
+    },
+    "groundingSettings": {
+      "groundingConfidence": "HIGH"
+    },
+    "payloadSettings": {
+      "enableSnippetsPayload": true,
+      "maxSnippetsCount": 2
+    }
+  },
+  "toolType": "CUSTOMIZED_TOOL"
+}

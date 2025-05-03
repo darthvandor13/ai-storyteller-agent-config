@@ -1,0 +1,61 @@
+{
+  "name": "51efc881-d61a-46bb-a750-98ec0705f385",
+  "actions": [ {
+    "userUtterance": {
+      "text": "I'm ready for a story."
+    }
+  }, {
+    "agentUtterance": {
+      "text": "Wonderful! Welcome, world traveler, to the realm of imagination. Tell me, what kind of adventure are you seeking? What is the name of the hero in your tale?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "Calvin"
+    }
+  }, {
+    "agentUtterance": {
+      "text": "Calvin, a fine name! What theme shall we explore? Space? Fantasy? Or perhaps something else entirely?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "Fantasy"
+    }
+  }, {
+    "agentUtterance": {
+      "text": "Fantasy, a realm of magic and wonder! And what moral will guide our hero’s journey? What message will this story convey?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "Self-reliance"
+    }
+  }, {
+    "agentUtterance": {
+      "text": "Self-reliance, a powerful message indeed! So, we have Calvin, our hero, venturing into a realm of fantasy, driven by the importance of relying on oneself. Does that sound right?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "Yes"
+    }
+  }, {
+    "agentUtterance": {
+      "text": "Great, let's begin...\n\nTitle: Calvin and the Echoing Garden\n\nOne breezy afternoon, Calvin—a curious boy with tangled hair and questions too big for his village—wandered beyond the woods behind his home. There, nestled between a willow tree and a crooked fence, was a door. Not on a house, not on a wall—just a freestanding wooden door humming with possibility.\n\nDriven by self-reliance and a thirst for wonder, Calvin turned the knob and stepped through.\n\nThe world on the other side shimmered in pastel hues. Birds whispered riddles, flowers danced in rhythm, and the sky rippled like pond water. “Welcome to the Echoing Garden,” said a talking fox with spectacles, “where every question finds an answer—but only if you ask it the right way.”\n\nCalvin wandered the garden, each step taking him deeper into puzzles and paradoxes. A chessboard forest argued with itself about which direction was forward. A grumpy caterpillar asked him to define “real.” Calvin didn’t know the answers, but he kept moving, thinking, learning.\n\nEventually, he came upon a throne made of mirrors. A queen with two shadows sat upon it. “To rule here,” she said, “you must prove you know who you are—without anyone else telling you.”\n\nCalvin thought of all he’d learned. “I am Calvin. Not because others say it, but because I’ve walked, wondered, and chosen. I’ve made mistakes and kept going. That’s who I am.”\n\nThe queen smiled. “Then you’ve passed.”\n\nWith a flash, Calvin was back in his own world, the mysterious door now gone. He looked around. Same trees. Same path home. But something inside him had changed.\n\nHe no longer feared the unknown."
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "The user wants to hear a story. They choose the protagonist name \"Calvin\", the theme \"fantasy\", and the moral \"self-reliance\".",
+    "actionParameters": {
+    
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "The user chose Calvin as the protagonist, fantasy as the theme, and self-reliance as the moral. The playbook accepted all inputs and transitioned to story generation.",
+    "actionParameters": {
+    
+    }
+  },
+  "displayName": "Calvin Fantasy Self-Reliance",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 737,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "en"
+}

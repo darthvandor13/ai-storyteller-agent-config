@@ -1,0 +1,24 @@
+{
+  "name": "915a775b-33e2-4bd3-b5c2-b0711b577a62",
+  "displayName": "ShowStory",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Debug - chroma_summary value is: [$session.params.chroma_summary]" ]
+      },
+      "languageCode": "en"
+    } ],
+    "advancedSettings": {
+      "playbackInterruptionSettings": {
+      
+      },
+      "dtmfSettings": {
+        "useSystemEntityRule": false
+      }
+    }
+  },
+  "description": "Page in the Storyteller Playbook to Display the Response"
+}

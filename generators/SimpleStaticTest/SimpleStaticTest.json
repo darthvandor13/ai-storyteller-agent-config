@@ -1,0 +1,13 @@
+{
+  "name": "87bddc86-e9f8-493e-a558-441cda5587e8",
+  "displayName": "SimpleStaticTest",
+  "modelParameter": {
+    "temperature": 0.5,
+    "maxDecodeSteps": 128,
+    "topP": 0.94999999,
+    "topK": 40
+  },
+  "llmModelSettings": {
+    "model": "gemini-2.0-flash-001"
+  }
+}

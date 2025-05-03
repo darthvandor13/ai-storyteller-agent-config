@@ -1,0 +1,6 @@
+{
+  "promptTexts": [ {
+    "text": "Write a new short story of 300-350 words combining these inputs:\n\n1. The hero's name: $protagonist\n2. The theme: $theme\n3. The moral: $moral\n4. Creative inspiration from the following snippet:\n   $chroma_summary\n\nDo not introduce any facts outside of $chroma_summary, but do adapt or transform it as needed to fit the user's chosen theme and moral. Incorporate the moral naturally in the story. Make sure the story has a beginning, middle, and end, and do not merely copy text verbatim from $chroma_summary.\n",
+    "languageCode": "en"
+  } ]
+}

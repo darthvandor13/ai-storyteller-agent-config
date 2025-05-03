@@ -1,0 +1,46 @@
+{
+  "name": "cb31fc4b-62f4-4fc8-849d-a32e9558fa6c",
+  "displayName": "WorkspaceStoryContextTool-OneTime",
+  "description": "Queries the GCS story content based on user input to find relevant inspiration snippets.",
+  "dataStoreSpec": {
+    "dataStoreConnections": [ {
+      "dataStoreType": "UNSTRUCTURED",
+      "dataStore": "projects/725461437054/locations/us/collections/default_collection/dataStores/storycontentgcs-v2_1744348410757",
+      "documentProcessingMode": "CHUNKS",
+      "engineType": "CHAT_ENGINE",
+      "connectorConfig": {
+      
+      },
+      "createTime": {
+        "seconds": 1744348446,
+        "nanos": 183139000
+      },
+      "displayName": "StoryContentGCS_V2",
+      "dialogflowAddTime": {
+        "seconds": 1744348820,
+        "nanos": 304000000
+      }
+    } ],
+    "models": {
+      "summarizationModel": {
+      
+      },
+      "rewriterModel": {
+      
+      }
+    },
+    "fallbackPrompt": {
+    
+    },
+    "groundingSettings": {
+    
+    },
+    "payloadSettings": {
+    
+    },
+    "voiceModeSettings": {
+    
+    }
+  },
+  "toolType": "CUSTOMIZED_TOOL"
+}

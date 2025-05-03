@@ -1,0 +1,6 @@
+{
+  "promptTexts": [ {
+    "text": "Respond with a fun confirmation that the user chose the $theme theme for the story. Make it energetic and story-like.",
+    "languageCode": "en"
+  } ]
+}

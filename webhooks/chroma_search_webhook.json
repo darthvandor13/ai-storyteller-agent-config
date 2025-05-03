@@ -1,0 +1,11 @@
+{
+  "name": "b5a04405-8357-4745-aec5-297cf2d8d0a9",
+  "displayName": "chroma_search_webhook",
+  "genericWebService": {
+    "uri": "https://chromadb-rest-wrapper-725461437054.us-central1.run.app/query",
+    "webhookType": "STANDARD"
+  },
+  "timeout": {
+    "seconds": 10
+  }
+}
