@@ -1,3 +1,5 @@
+## >> [Link to MAIN AI Virtual Storyteller Repository](https://github.com/darthvandor13/CSC212-Virtual-Storyteller) <<
+
 # ai-storyteller-agent-config
 
 # AI Storyteller Conversational Agent
